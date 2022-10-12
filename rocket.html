@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Rocket </title>
+	<style>
+
+		/* Adding style to the body of the website */
+
+		* { margin: 0; padding: 0; } /* Doing a global reset for all elements of the website */
+		body { overflow-y: hidden; } /* Hiding the overflow to have a better display during animations */
+
+		/* Adding style to the comic section */
+
+		.comic { display: flex; flex-direction: column; } /* Using the flexbox layout to be able to design the comic */
+		svg { height: 100vh; width: 100vw; } /* Setting the height and width of the svgs to the height and width of the viewport (the viewable screen) */
+		/* Setting the background colors of the "frame" divs to the same colors as the background colors of the svgs */
+		.first-frame { background-color: #AFDCEB; display: flex; }
+		.second-frame { background-color: #AFDCEB; display: flex; }
+		.third-frame { background-color: #000000; display: flex; }
+
+		/* Animations for the comic section */
+
+		.slide-in { animation-name: slide-in; animation-duration: 2.8s; animation-fill-mode: forwards; }
+		@keyframes slide-in { from { transform: translateY(100%) } to {  } }
+		.slide-out { animation-name: slide-out; animation-duration: 2.8s; animation-fill-mode: forwards; }
+		@keyframes slide-out { from {  } to { transform: translateY(-100%) } }
+		.fade-in { animation-name: fade-in; animation-duration: 2.8s; animation-fill-mode: forwards; }
+		@keyframes fade-in { from { opacity: 0 } to { opacity: 1 } }
+		.fade-out { animation-name: fade-out; animation-duration: 2.8s; animation-fill-mode: forwards; }
+		@keyframes fade-out { from { opacity: 1 } to { opacity: 0 } }
+
+	</style>
+</head>
+<body>
+	<!-- Creating the comic section !-->
+	<!-- Note: The svgs are internal svgs (and not external svgs) to be able to add animations to the comic !-->
+	<!-- Note: The frames are in a reversed order (as the frame at the bottom is the first one and the frame at the top is the last one) !-->
+	<content class="comic">
+		<div class="third-frame fade-out">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><style>.space-1{fill:none;}.space-2{clip-path:url(#clip-path);}.space-3{fill-opacity:0;}.space-3,.space-4,.space-5,.space-6,.space-7{fill-rule:evenodd;}.space-4{fill:#fefefa;}.space-5{fill:#333;}.space-6{fill:#d21404;}.space-7{fill:#b8c8f8;}</style><clipPath id="clip-path"><rect id="SVGID" class="space-1" x="410" y="65" width="1500" height="1000"/></clipPath></defs><g id="Space"><rect width="1920" height="1080"/></g><g id="Rocket-third" class="slide-out"><g class="space-2"><path class="space-3" d="M410,65H1910V1065H410Z"/><path class="space-4" d="M875.63,234.4h211.21V892H875.63Z"/><path class="space-5" d="M891,892h75l15.32,15.32v76.59H875.63V907.33Z"/><path class="space-5" d="M996.55,892h75l15.32,15.32v76.59H981.24V907.33Z"/><path class="space-6" d="M875.64,234.4,981.25,80.8l105.61,153.6Z"/><path class="space-7" d="M914.05,341.2h0a67.2,67.2,0,0,1,67.2-67.2h0a67.21,67.21,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.19h0A67.2,67.2,0,0,1,914.05,341.2Z"/><path class="space-7" d="M914.05,689.18h0a67.2,67.2,0,0,1,67.2-67.2h0a67.21,67.21,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.2h0A67.2,67.2,0,0,1,914.05,689.18Z"/><path class="space-7" d="M914,515.19h0a67.2,67.2,0,0,1,67.2-67.2h0a67.19,67.19,0,0,1,67.19,67.2h0a67.2,67.2,0,0,1-67.19,67.2h0A67.2,67.2,0,0,1,914,515.19Z"/></g></g></svg>
+		</div>
+		<div class="second-frame fade-out">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><style>.sky-1{fill:none;}.sky-2{fill:#afdceb;}.sky-3{clip-path:url(#clip-path);}.sky-4{fill-opacity:0;}.sky-4,.sky-5,.sky-6,.sky-7,.sky-8{fill-rule:evenodd;}.sky-5{fill:#fefefa;}.sky-6{fill:#333;}.sky-7{fill:#d21404;}.sky-8{fill:#b8c8f8;}</style><clipPath id="clip-path"><rect id="SVGID" class="sky-1" x="410" y="65" width="1500" height="1000"/></clipPath></defs><g id="Sky"><rect class="sky-2" width="1920" height="1080"/></g><g id="Rocket-second" class="slide-out"><g class="sky-3"><path class="sky-4" d="M410,65H1910V1065H410Z"/><path class="sky-5" d="M875.63,234.4h211.21V892H875.63Z"/><path class="sky-6" d="M891,892h75l15.32,15.32v76.59H875.63V907.33Z"/><path class="sky-6" d="M996.55,892h75l15.32,15.32v76.59H981.24V907.33Z"/><path class="sky-7" d="M875.64,234.4,981.25,80.8l105.61,153.6Z"/><path class="sky-8" d="M914.05,341.2h0a67.2,67.2,0,0,1,67.2-67.2h0a67.21,67.21,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.19h0A67.2,67.2,0,0,1,914.05,341.2Z"/><path class="sky-8" d="M914.05,689.18h0a67.2,67.2,0,0,1,67.2-67.2h0a67.21,67.21,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.2h0A67.2,67.2,0,0,1,914.05,689.18Z"/><path class="sky-8" d="M914,515.19h0a67.2,67.2,0,0,1,67.2-67.2h0a67.19,67.19,0,0,1,67.19,67.2h0a67.2,67.2,0,0,1-67.19,67.2h0A67.2,67.2,0,0,1,914,515.19Z"/></g></g></svg>
+		</div>
+		<div class="first-frame fade-in">
+			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><style>.surface-1,.surface-11{fill:none;}.surface-2{fill:#afdceb;}.surface-13,.surface-3{fill:#aef359;}.surface-4{clip-path:url(#clip-path);}.surface-5{fill-opacity:0;}.surface-13,.surface-15,.surface-16,.surface-17,.surface-5,.surface-6,.surface-7,.surface-8,.surface-9{fill-rule:evenodd;}.surface-6{fill:#787276;}.surface-7{fill:#b8c8f8;}.surface-8{fill:#80471c;}.surface-9{fill:#ffd801;}.surface-10{clip-path:url(#clip-path-2);}.surface-11{stroke:#052487;stroke-linejoin:round;stroke-width:16px;}.surface-12{clip-path:url(#clip-path-3);}.surface-14{clip-path:url(#clip-path-4);}.surface-15{fill:#fefefa;}.surface-16{fill:#333;}.surface-17{fill:#d21404;}</style><clipPath id="clip-path"><rect id="SVGID" class="surface-1" x="719.06" y="128.15" width="1500" height="1000"/></clipPath><clipPath id="clip-path-2"><rect id="SVGID-2" data-name="SVGID" class="surface-1" x="197.06" y="49.15" width="1500" height="1000"/></clipPath><clipPath id="clip-path-3"><rect id="SVGID-3" data-name="SVGID" class="surface-1" x="-245" y="243" width="1500" height="1000"/></clipPath><clipPath id="clip-path-4"><rect id="SVGID-4" data-name="SVGID" class="surface-1" x="320.06" y="54.15" width="1500" height="1000"/></clipPath></defs><g id="Sky"><rect class="surface-2" width="1920" height="1080"/></g><g id="Grass"><rect class="surface-3" x="110" y="880" width="1700" height="200"/><path class="surface-3" d="M1919.6,1080c0-110.46-49.07-200-109.6-200,0,0-.4,89.54-.4,200"/><path class="surface-3" d="M.4,1080C.4,969.54,49.47,880,110,880c0,0,.4,89.54.4,200"/></g><g id="Building"><g class="surface-4"><path class="surface-5" d="M719.06,128.15h1500v1000h-1500Z"/><path class="surface-6" d="M1059.86,646.15h734.4V972.54h-734.4Z"/><path class="surface-7" d="M1098.26,685h657.61V790.56H1098.26Z"/><path class="surface-8" d="M1635.86,828.54h120v144h-120Z"/><path class="surface-7" d="M1098.26,828.54h499.22V934.15H1098.26Z"/><path class="surface-9" d="M1720.88,900.54h0a9.6,9.6,0,0,1,9.6-9.6h0a9.59,9.59,0,0,1,9.61,9.6h0a9.61,9.61,0,0,1-9.61,9.61h0A9.6,9.6,0,0,1,1720.88,900.54Z"/></g></g><g id="Tower"><g class="surface-10"><path class="surface-5" d="M197.06,49.15h1500v1000h-1500Z"/><path class="surface-8" d="M535.3,385.39V252.91L402.83,385.39Z"/><path class="surface-5" d="M397.06,823.15h144v144h-144Z"/><path class="surface-11" d="M397.06,823.15h144v144h-144Z"/><path class="surface-5" d="M541.06,967.15l-144-144"/><path class="surface-11" d="M541.06,967.15l-144-144"/><path class="surface-5" d="M541.06,823.15l-144,144"/><path class="surface-11" d="M541.06,823.15l-144,144"/><path class="surface-5" d="M397.06,679.15h144v144h-144Z"/><path class="surface-11" d="M397.06,679.15h144v144h-144Z"/><path class="surface-5" d="M541.06,823.15l-144-144"/><path class="surface-11" d="M541.06,823.15l-144-144"/><path class="surface-5" d="M541.06,679.15l-144,144"/><path class="surface-11" d="M541.06,679.15l-144,144"/><path class="surface-5" d="M397.06,535.15h144v144h-144Z"/><path class="surface-11" d="M397.06,535.15h144v144h-144Z"/><path class="surface-5" d="M541.06,679.15l-144-144"/><path class="surface-11" d="M541.06,679.15l-144-144"/><path class="surface-5" d="M541.06,535.15l-144,144"/><path class="surface-11" d="M541.06,535.15l-144,144"/><path class="surface-5" d="M397.06,391.15h144v144h-144Z"/><path class="surface-11" d="M397.06,391.15h144v144h-144Z"/><path class="surface-5" d="M541.06,535.15l-144-144"/><path class="surface-11" d="M541.06,535.15l-144-144"/><path class="surface-5" d="M541.06,391.15l-144,144"/><path class="surface-11" d="M541.06,391.15l-144,144"/><path class="surface-5" d="M541.06,391.15h144v144h-144Z"/><path class="surface-11" d="M541.06,391.15h144v144h-144Z"/><path class="surface-5" d="M685.06,535.15l-144-144"/><path class="surface-11" d="M685.06,535.15l-144-144"/><path class="surface-5" d="M685.06,391.15l-144,144"/><path class="surface-11" d="M685.06,391.15l-144,144"/><path class="surface-5" d="M541.06,535.15h144v144h-144Z"/><path class="surface-11" d="M541.06,535.15h144v144h-144Z"/><path class="surface-5" d="M685.06,679.15l-144-144"/><path class="surface-11" d="M685.06,679.15l-144-144"/><path class="surface-5" d="M685.06,535.15l-144,144"/><path class="surface-11" d="M685.06,535.15l-144,144"/><path class="surface-5" d="M541.06,679.15h144v144h-144Z"/><path class="surface-11" d="M541.06,679.15h144v144h-144Z"/><path class="surface-5" d="M685.06,823.15l-144-144"/><path class="surface-11" d="M685.06,823.15l-144-144"/><path class="surface-5" d="M685.06,679.15l-144,144"/><path class="surface-11" d="M685.06,679.15l-144,144"/><path class="surface-5" d="M541.06,823.15h144v144h-144Z"/><path class="surface-11" d="M541.06,823.15h144v144h-144Z"/><path class="surface-5" d="M685.06,967.15l-144-144"/><path class="surface-11" d="M685.06,967.15l-144-144"/><path class="surface-5" d="M685.06,823.15l-144,144"/><path class="surface-11" d="M685.06,823.15l-144,144"/><path class="surface-5" d="M541.06,247.15h144v144h-144Z"/><path class="surface-11" d="M541.06,247.15h144v144h-144Z"/><path class="surface-5" d="M685.06,391.15l-144-144"/><path class="surface-11" d="M685.06,391.15l-144-144"/><path class="surface-5" d="M685.06,247.15l-144,144"/><path class="surface-11" d="M685.06,247.15l-144,144"/><path class="surface-5" d="M541.06,247.15l-144,144"/><path class="surface-11" d="M541.06,247.15l-144,144"/><path class="surface-11" d="M685.06,391.15H785.85"/><path class="surface-11" d="M685.06,319.15H785.85"/><path class="surface-11" d="M685.06,679.15H785.85"/><path class="surface-11" d="M685.06,607.15H785.85"/></g></g><g id="Bush"><g class="surface-12"><path class="surface-5" d="M-245,243H1255V1243H-245Z"/><path class="surface-13" d="M184.42,856.18h0c-1.55-9.68,3.53-19.27,13.09-24.69a34.55,34.55,0,0,1,31.82-.78h0c3.51-5.63,9.93-9.51,17.33-10.48a26.41,26.41,0,0,1,20.23,5.56h0c3-5.1,8.86-8.53,15.53-9.07s13.19,1.9,17.25,6.43h0c5.4-5.41,14-7.69,22.07-5.85s14.16,7.47,15.64,14.45h0a23.16,23.16,0,0,1,15.12,10.7,17.54,17.54,0,0,1,.44,16.75h0c6.52,7.22,8,16.84,4,25.27s-13,14.4-23.62,15.68c-.07,7.91-5.17,15.17-13.33,19a29.68,29.68,0,0,1-26-.61h0c-3.37,9.47-12.83,16.44-24.31,17.9s-22.91-2.87-29.36-11.1h0A39.45,39.45,0,0,1,214,928.57c-8.93-2-16.54-7-21.13-13.79h0c-8.08.81-15.89-2.75-19.55-8.91s-2.41-13.61,3.15-18.65h0c-7.21-3.6-10.89-10.76-9.12-17.74s8.59-12.2,16.9-12.93Z"/><path class="surface-5" d="M176.48,887.22h0a22,22,0,0,0,11.26,2.22m5.14,25.34a21.55,21.55,0,0,0,4.93-1.06m42.52,11.6a24,24,0,0,1-3-4.83m56.64-2h0a22.08,22.08,0,0,0,1.18-5.3m38.14-13.06c.08-8.42-5.54-16.13-14.45-19.82m34.07-21.13a20.84,20.84,0,0,1-6.44,7.44m-9.12-34.89h0a15.37,15.37,0,0,1,.34,3.51m-38.05-12.11h0a17.89,17.89,0,0,0-3.29,4.48m-29.49-1.84h0a15,15,0,0,0-1.6,3.86m-36,1.06h0a30.06,30.06,0,0,1,5.77,3.74m-50.68,21.73h0a21.92,21.92,0,0,0,1,3.94"/></g></g><g id="Rocket-first" class=""><g class="surface-14"><path class="surface-5" d="M320.06,54.15h1500v1000h-1500Z"/><path class="surface-15" d="M785.69,223.55H996.91V881.16H785.69Z"/><path class="surface-16" d="M801,881.16h75l15.32,15.32v76.59H785.69V896.48Z"/><path class="surface-16" d="M906.62,881.16h75l15.32,15.32v76.59H891.3V896.48Z"/><path class="surface-17" d="M785.71,223.55,891.31,69.94,996.92,223.55Z"/><path class="surface-7" d="M824.12,330.35h0a67.19,67.19,0,0,1,67.19-67.2h0a67.19,67.19,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.19h0A67.19,67.19,0,0,1,824.12,330.35Z"/><path class="surface-7" d="M824.12,678.33h0a67.2,67.2,0,0,1,67.19-67.2h0a67.19,67.19,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.2h0A67.2,67.2,0,0,1,824.12,678.33Z"/><path class="surface-7" d="M824.1,504.34h0a67.2,67.2,0,0,1,67.2-67.2h0a67.19,67.19,0,0,1,67.2,67.2h0a67.2,67.2,0,0,1-67.2,67.19h0A67.2,67.2,0,0,1,824.1,504.34Z"/></g></g></svg>
+		</div>
+	</content>
+	<script>
+
+		// Loading the Rocket Engine and Wind Fall audios to avoid delays while playing them
+
+		var rocketAudio = new Audio("Rocket Engine.mp3");
+		var windAudio = new Audio("Wind Fall.mp3");
+
+		// Making the web page scroll to the first frame right after loading
+
+		history.scrollRestoration = "manual";
+		var firstFrame = document.getElementsByClassName("first-frame")[0];
+		firstFrame.scrollIntoView();
+
+		// -------------------------------------------------- \\
+
+		// Adding event listeners to all rockets to make them slide-in and slide-out and make the frames fade-in and fade-out after scrolling over them
+
+		var numberOfFrames = 3;
+		var ordinalNumbers = ["first", "second", "third"];
+
+		for (let i = 0; i < numberOfFrames-1; i++) {
+
+			let currentRocket = document.getElementById("Rocket-" + ordinalNumbers[i]);
+			let newRocket = document.getElementById("Rocket-" + ordinalNumbers[i+1]);
+
+			let currentFrame = document.getElementsByClassName(ordinalNumbers[i] + "-frame")[0];
+			let newFrame = document.getElementsByClassName(ordinalNumbers[i+1] + "-frame")[0];
+
+			currentRocket.addEventListener("wheel", function () {
+
+				rocketAudio.currentTime = 0;
+				rocketAudio.play();
+
+				slideOutRocket(currentRocket);
+				fadeOutFrame(currentFrame);
+				setTimeout(function () { fadeInFrame(newFrame); slideInRocket(newRocket); }, 2.8*1000);
+
+			});
+
+		}
+
+		function slideOutRocket(currentRocket) { currentRocket.classList.remove("slide-in"); currentRocket.classList.add("slide-out"); }
+		function fadeOutFrame(currentFrame) { currentFrame.className = currentFrame.className.replace("fade-in", "fade-out"); }
+		function fadeInFrame(newFrame) { newFrame.scrollIntoView(); newFrame.className = newFrame.className.replace("fade-out", "fade-in"); }
+		function slideInRocket(newRocket) { newRocket.classList.remove("slide-out"); newRocket.classList.add("slide-in"); }
+
+		// Note: These functions make the rockets slide-in and slide-out and make the frames fade-in and fade-out
+
+		// -------------------------------------------------- \\
+
+		// Adding an event listener to the last rocket to make the web page scroll to the first frame after clicking it
+
+		var thirdRocket = document.getElementById("Rocket-third");
+		thirdRocket.addEventListener("click", function () {
+
+			windAudio.currentTime = 0;
+			windAudio.play();
+
+			showFrames();
+			firstFrame.scrollIntoView({behavior: "smooth"});
+			setTimeout(function () { window.location.reload() }, 1.0*1000);
+
+		});
+
+		function showFrames() {
+			for (let i = 0; i < numberOfFrames-1; i++) {
+				let currentFrame = document.getElementsByClassName(ordinalNumbers[i] + "-frame")[0];
+				currentFrame.style.animation = "none";
+				currentFrame.style.opacity = 1;
+			}
+		}
+
+		// Note: The web page is reloaded after it scrolls to the first frame
+
+	</script>
+</body>
+</html>
